@@ -4,7 +4,7 @@ import requests
 
 def index(request):
     context = {}
-    api_key = 'MTRhNTIwOWQtYjBhMS00Nzc0LWJkZTktMzZmNjBhODk3NzA0'
+    api_key = 'foobar'
     location = 'Moscow'
     url = f'https://api.m3o.com/v1/weather/Now?location={location}'
     headers = {'Authorization': f'Bearer {api_key}'}
@@ -19,7 +19,7 @@ def index(request):
 
 def forecast(request):
     context = {}
-    api_key = 'MTRhNTIwOWQtYjBhMS00Nzc0LWJkZTktMzZmNjBhODk3NzA0'
+    api_key = 'foobar'
     location = 'Moscow'
     url = f'https://api.m3o.com/v1/weather/forecast?location={location}&days=10'
     headers = {'Authorization': f'Bearer {api_key}'}
