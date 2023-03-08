@@ -21,14 +21,12 @@
           </ul>
     </nav>
     <div class="container">
-        <h1 class="text">{{weather_now.location}}</h1>
-        <h2 class="text">{{weather_now.condition}}</h2>
-        <h2 class="text">Temperature is: {{weather_now.temp_c}} °C</h2>
-        {% if weather_now.temp_c != weather_now.feels_like_c %}
-        <h2 class="text">Buuut.. it fells like {{weather_now.feels_like_c}} °C</h2>
-        {% endif %}
-        <h2 class="text">Humidity is {{weather_now.humidity}} %</h2>
-        <h2 class="text">And wind speed is {{weather_now.wind_kph}} kph</h2>
+      <h1 class="text">Forecast for {{ forecast.location }}</h1>
+      <ul>
+      {% for day in forecast.forecast %}
+          <li class="text">{{ day.date }}: {{ day.condition }}, {{ day.max_temp_c }}/{{ day.min_temp_c }}</li>
+      {% endfor %}
+      </ul>
     </div>
     
 </body>

@@ -1,4 +1,24 @@
-body{
-    color: rgb(80, 80, 80);
+.h-100{
+    background-color: rgb(80, 80, 80);
     font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+    
   }
+.text{
+  color: rgb(226, 214, 214);
+}
+.container{
+  text-align: center;
+}
+
+@media screen and (min-width: 601px) {
+  .container {
+    font-size: 20px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .container {
+    font-size: 30px;
+  }
+}
